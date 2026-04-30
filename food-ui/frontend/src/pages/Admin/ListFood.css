@@ -1,0 +1,75 @@
+/* ListFood.css */
+.col-11.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(18, 38, 63, 0.08);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.col-11.card .table {
+  margin-bottom: 0;
+  min-width: 100%;
+}
+
+.col-11.card .table thead {
+  background: #f7f8fc;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.col-11.card .table th,
+.col-11.card .table td {
+  color: #444b5a;
+  font-size: 0.95rem;
+  vertical-align: middle;
+  border-top: none;
+  padding: 1rem 1rem;
+}
+
+.col-11.card .table th {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.col-11.card .table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.col-11.card .table tbody tr:hover {
+  background: rgba(56, 89, 150, 0.06);
+}
+
+.food-image {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.btn-danger {
+  min-width: 90px;
+}
+
+@media (max-width: 991px) {
+  .col-11.card {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-11.card {
+    padding: 1rem;
+  }
+
+  .col-11.card .table th,
+  .col-11.card .table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.88rem;
+  }
+
+  .food-image {
+    width: 48px;
+    height: 48px;
+  }
+}

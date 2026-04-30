@@ -1,0 +1,38 @@
+import React, { useState } from 'react'
+import './LoginPopup.css'
+import { assets } from '../../assets/frontend_assets/assets';
+
+type LoginPopupProps = {
+  setShowLoginPopup: (show: boolean) => void
+}
+
+const LoginPopup: React.FC<LoginPopupProps> = ({ setShowLoginPopup }) => {
+    const [currentState, setCurrentState] = useState('Login'); // login or signup
+  return (
+    <div className='login-popup'>
+        <form className="login-popup-container">
+            <div className="login-popup-title">
+                <h2>{currentState}</h2>
+                <img onClick={() => setShowLoginPopup(false)} src={assets.cross_icon} alt="close" />
+            </div>
+            <div className="login-popup-inputs">
+                {currentState === 'Login' ? <></> : <input type="text" placeholder='Name' required />}
+                <input type="text" placeholder='Email' required />
+                <input type="password" placeholder='Password' required />
+                {currentState === 'Sign Up' && <input type="password" placeholder='Confirm Password' required />}    
+            </div>
+            <button type="submit">{currentState === 'Sign Up' ? 'Create Account' : 'Login'}</button>
+            <div className="login-popup-condition">
+                <input type="checkbox" id="terms" required/>
+                <label htmlFor="terms">I agree to the terms and conditions</label>
+            </div>
+            {currentState === 'Login'
+                ? <p>Create a new account? <span onClick={() => setCurrentState('Sign Up')}>Click here</span></p>
+                :<p>Already have an account? <span onClick={() => setCurrentState('Login')}>Login here</span></p>
+            }
+        </form>
+    </div>
+  )
+}
+
+export default LoginPopup

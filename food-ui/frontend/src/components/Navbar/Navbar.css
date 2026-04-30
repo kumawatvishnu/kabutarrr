@@ -1,0 +1,121 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 150px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f17938;
+}
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.basket-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+}
+
+.navbar button {
+    background-color: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.navbar button:hover {
+    background-color: tomato;
+    color: white;
+    border: 1px solid tomato;
+}
+
+.navbar .active {
+    /*background-color: #f17938;*/
+    /* color: white; */
+    border-bottom: 2px solid #49557e;
+    padding-bottom: 2px;
+}
+@media (max-width: 1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 900px) {
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 16px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}

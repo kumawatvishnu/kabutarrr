@@ -1,0 +1,214 @@
+.place-or {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px 6vw;
+    margin: 30px 0;
+}
+
+/* Left Section - Delivery Form */
+.place-order-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.place-order-left .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #49557e;
+    margin-bottom: 10px;
+}
+
+.place-order-left input {
+    padding: 12px 15px;
+    border: 1px solid #d0d0d0;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #49557e;
+    font-family: 'Outfit', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.place-order-left input:focus {
+    outline: none;
+    border-color: #f17938;
+    background-color: #fff;
+}
+
+.place-order-left input::placeholder {
+    color: #999;
+}
+
+/* Multi-field inputs (for side-by-side layout) */
+.multi-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.multi-fields input {
+    width: 100%;
+}
+
+/* Right Section - Cart Total and Promo */
+.place-order-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cart Total Section */
+.cart-total {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.cart-total h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #49557e;
+    margin-bottom: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #49557e;
+}
+
+.cart-total-details p {
+    font-size: 14px;
+}
+
+.cart-total-details p:last-child {
+    font-weight: 600;
+}
+
+.cart-total hr {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background-color: #d0d0d0;
+}
+
+.cart-total button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #f17938;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+    background-color: #e06830;
+}
+
+/* Promo Code Section */
+.cart-promocode {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.cart-promocode-input {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cart-promocode-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #d0d0d0;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #49557e;
+    font-family: 'Outfit', sans-serif;
+}
+
+.cart-promocode-input input:focus {
+    outline: none;
+    border-color: #f17938;
+}
+
+.cart-promocode-input input::placeholder {
+    color: #999;
+}
+
+.cart-promocode-input button {
+    padding: 12px 30px;
+    background-color: #49557e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.cart-promocode-input button:hover {
+    background-color: #3a4156;
+}
+
+.cart-promocode p {
+    font-size: 14px;
+    color: #49557e;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .place-or {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px 4vw;
+    }
+
+    .multi-fields {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .place-order-left .title {
+        font-size: 20px;
+    }
+
+    .place-order-left input,
+    .cart-promocode-input input {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .cart-total,
+    .cart-promocode {
+        padding: 20px;
+    }
+
+    .cart-total h2 {
+        font-size: 18px;
+    }
+
+    .cart-total button,
+    .cart-promocode-input button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .multi-fields {
+        grid-template-columns: 1fr;
+    }
+}
